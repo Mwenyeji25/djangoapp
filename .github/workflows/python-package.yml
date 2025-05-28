@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: [3.11]  # ✅ Only one correct definition
+        python-version: [3.11]
 
     steps:
       - name: Checkout repository
@@ -30,10 +30,10 @@ jobs:
 
       - name: Lint with flake8
         run: |
-          flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
-          flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+          flake8 --count --select=E9,F63,F7,F82 --show-source --statistics
+          flake8 --count --exit-zero --statistics
 
       - name: Run tests
         run: |
-          pytest || true  # ❗ optional: avoids build fail if no tests exist
+          pytest || true
           python manage.py test || true
