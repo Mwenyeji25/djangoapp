@@ -27,7 +27,12 @@ SECRET_KEY = 's4x*u3sk@n#5#1+=97wyt2!)e@z8+@ujr-0o0km1b6$!+ox32f'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'djangoapp-pg5v.onrender.com',
+    'djangoappauth.netlify.app',
+    'localhost',
+    '127.0.0.1',
+]
 
 
 # Application definition
