@@ -3,7 +3,8 @@ services:
     name: lss
     env: python
     buildCommand: pip install -r requirements.txt
-    startCommand: python manage.py runserver 0.0.0.0:8000
+    startCommand: startCommand: gunicorn lss.wsgi:application --bind 0.0.0.0:10000
+
     envVars:
       - key: DJANGO_SETTINGS_MODULE
         value: lss.settings
