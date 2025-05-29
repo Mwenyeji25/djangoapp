@@ -1,18 +1,13 @@
 services:
   - type: web
-    name: djangoapp
-    env: python
-    buildCommand: pip install -r requirements.txt
-    startCommand: services:
-  - type: web
     name: lss
     env: python
     buildCommand: pip install -r requirements.txt
-    startCommand: cd src && python manage.py runserver 0.0.0.0:8000
+    startCommand: python manage.py runserver 0.0.0.0:8000
     envVars:
       - key: DJANGO_SETTINGS_MODULE
         value: lss.settings
       - key: SECRET_KEY
-        value: your-secret-key
+        value: "s4x*u3sk@n#5#1+=97wyt2!)e@z8+@ujr-0o0km1b6$!+ox32f"
       - key: DEBUG
         value: "False"
